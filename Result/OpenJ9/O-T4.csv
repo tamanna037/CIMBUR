@@ -1,0 +1,79 @@
+T4-FQ,T4-FA,T4-YNQ,T4-YNA,T4-SQ,T4-SA,T4-YNA_LLM,T4-YN_LLM_R,T4-SA_LLM,T4-S_LLM_R,T4-FA_LLM,T4-FA_LLM_R,T4-YNA_CFG,T4-YN_CFG_R,T4-S_CFG_R,T4-FA_CFG,T4-FA_CFG_R,T4-YNA_Query,T4-YN_Query_R,T4-S_Query_R,T4-FA_Query,T4-FA_Query_R,T4-YNA_MT,T4-YN_MT_R,T4-S_MT_R,T4-FA_MT,T4-FA_MT_R,T4-YNA_COVE,T4-YN_COVE_R,T4-S_COVE_R,T4-FA_COVE,T4-FA_COVE_R,T4-SA_COVE,T4-SA_CFG,T4-SA_Query,T4-SA_MT,T4-YNA_CIMBUR,T4-YN_CIMBUR_R,T4-SA_CIMBUR,T4-S_CIMBUR_R,T4-FA_CIMBUR,T4-FA_CIMBUR_R
+Suggest existing labels to tag issue 18608,"bug, jdk17",Is there an existing label specifically for user raised issues?,Yes,Summarize the guidelines for assigning labels to issues in this project,"Assign labels based on issue type, component, architecture, java version and whether it's user-raised or required triage etc","Yes, there is an existing label specifically for user raised issues. The label is ""userRaised"".",1.0,"The guidelines for assigning labels to issues in this project include:
+- comp:gc, userRaised
+- comp:vm, userRaised
+- test failure, arch:z, os:linux, release blocker
+- comp:jit, test failure, jdk20
+- comp:infra, test failure
+- comp:test, test failure
+- comp:jclextensions, test failure, test excluded
+- comp:vm, test failure, jdk22",0.0,Existing labels to tag issue 18608 are 'userRaised'.,0,"Yes, there is an existing label specifically for user raised issues.",1.0,0.0,Existing labels to tag issue 18608 are 'userRaised'.,0,"Yes, there is a label specifically designated for user-raised issues.",1.0,0.0,"Existing labels that can be recommended for tagging issue 18608 are: 
+- comp:gc
+- comp:vm
+- test failure
+- arch:z
+- os:linux
+- release blocker
+- comp:jit
+- jdk20
+- comp:infra
+- comp:test
+- blocker
+- project:MH
+- jdk21
+- test excluded
+- jdk11
+- triageRequired
+- criu
+- comp:fips
+- arch:aarch64
+- project:loom
+- comp:jvmti
+- jdk22",0,"Yes, there is a designated label for issues raised by users, which is 'userRaised'.",1.0,0.0,Existing labels to tag issue 18608 are 'userRaised'.,0,The label specifically for user raised issues is 'userRaised'.,1.0,0.0,Existing labels to tag issue 18608 are 'userRaised'.,0,"The guidelines for assigning labels to issues in this project include labels such as 'comp:gc' for garbage collection related issues, 'comp:vm' for OpenJ9 related issues, 'test failure' for specific dates, 'release blocker' for issues like 'OpenJDK java/lang/String/ToLowerCase ArrayIndexOutOfBoundsException', 'comp:jit' used in various contexts, 'comp:test' for specific issues like 'Jep442Tests_testLinkerFfi_DownCall', 'project:MH' for 'eclipse-openj9/openj9', 'triageRequired' for issues created on specific dates, 'comp:fips' for test failures in issues 18043 and 18277, 'arch:aarch64' for the 'aarch64' architecture, 'project:loom' for JDK21 serviceability, JVMTI, vthread, and 'comp:jvmti' for specific JVM components like 'JDK21 serviceability/jvmti/vthread/ThreadListStackTracesTest', 'comp:jclextensions' for JVM class extensions, and 'test excluded' for specific issues like 'OpenJDK java/lang/Thread/SleepSanity'.","The guidelines for assigning labels to issues in this project include:
+- comp:gc
+- comp:vm
+- test failure
+- arch:z
+- os:linux
+- comp:jit
+- jdk20
+- comp:infra
+- comp:test
+- blocker
+- project:MH
+- jdk21
+- test excluded
+- jdk11
+- triageRequired
+- criu
+- comp:fips
+- arch:aarch64
+- project:loom
+- comp:jvmti
+- jdk22
+- comp:jclextensions","The label assignment guidelines outlined for this project include:
+- comp:gc
+- comp:vm
+- test failure
+- release blocker
+- comp:jit
+- comp:infra
+- comp:test
+- project:MH
+- jdk20
+- jdk21
+- jdk11
+- triageRequired
+- criu
+- comp:fips
+- arch:aarch64
+- project:loom
+- comp:jvmti
+- comp:jclextensions","The guidelines for assigning labels to issues in this project include labels such as 'comp:gc', 'comp:vm', 'test failure', 'release blocker', 'comp:jit', 'comp:infra', 'comp:test', 'jdk11', 'triageRequired', 'comp:fips', 'arch:aarch64', 'project:MH', 'comp:jvmti', 'comp:jclextensions', 'test excluded', 'jdk20', 'jdk21', 'jdk22', 'criu', 'userRaised', and 'arch:z, os:linux'.","Yes, there is a designated label for user-reported issues, and the label name is ""userRaised"".",1.0,"The label assignment guidelines for issues in this project include labels such as 'comp:gc', 'comp:vm', 'test failure', 'comp:jit', 'comp:infra', 'comp:fips', 'arch:aarch64', 'jdk11', 'jdk20', 'jdk21', 'jdk22', 'project:MH', 'project:loom', 'comp:jvmti', 'comp:jclextensions', 'criu', 'blocker', and 'test excluded'.",0.0,['userRaised'],0
+What existing label is recommended for issues that needs immediate triaging?,triageRequired,Can a single issue be tagged with both comp:vm and comp:test if it affects both components?,Yes,"Explain for an issue affecting multiple components, how should it be labeled?","issue should be labeled with ""comp:"" followed by the affected components.","No, there are no issues that are tagged with both ""comp:vm"" and ""comp:test"" labels.",0.0,"For an issue affecting multiple components, it should be labeled with the relevant components separated by commas in the 'labels' column. Examples of such labels include 'comp:gc, userRaised', 'comp:vm, userRaised', 'test failure, arch:z, os:linux, release blocker', etc.",0.0,release blocker,0,"No, based on the query results, there are no issues that are tagged with both ""comp:vm"" and ""comp:test"" labels.",0.0,0.0,"The existing label recommended for issues that need immediate triaging is ""triageRequired"".",1,"Answer: No, there are no issues that have both ""comp:vm"" and ""comp:test"" labels assigned to them.",0.0,0.0,"Recommended labels for issues requiring immediate triaging are ""test failure, arch:z, os:linux, release blocker"".",0,"No, it is not possible for a single issue to have both ""comp:vm"" and ""comp:test"" tags as labels.",0.0,0.0,"The existing label recommended for issues that need immediate triaging is ""triage"".",0,"Yes, based on the query results, there are exceptions where an issue can be tagged with both 'comp:vm' and 'comp:test' labels.",1.0,0.0,The label recommended for issues that need immediate triaging is 'triageRequired'.,1,"The issue affecting multiple components should be labeled with 'comp:gc, userRaised'.","For an issue affecting multiple components, it should be labeled with both the component label (starting with 'comp:') and the 'userRaised' label.","The labeling approach for an issue impacting multiple components involves using labels that include the component identifier followed by a colon. Examples of such labels include 'comp:gc', 'comp:vm', 'comp:jit', 'comp:test', 'comp:infra', 'comp:fips', 'comp:jclextensions', and 'comp:jvmti'.","An issue affecting multiple components should be labeled with the component labels in the ""labels"" column. The labels should include the component abbreviation followed by a colon (comp:), such as ""comp:gc"" or ""comp:vm"". If an issue impacts multiple components, it should have multiple component labels in the ""labels"" column, separated by commas. This helps in identifying the different components affected by the issue.","No, an issue cannot be labeled with both 'comp:vm' and 'comp:test' even if it impacts both components.",0.0,"The labeling approach for an issue impacting multiple components involves using labels such as 'comp:gc', 'comp:vm', 'comp:jit', 'comp:test', 'comp:infra', 'comp:fips', 'comp:jvmti', 'comp:jclextensions', and more.",0.0,Recommended labels for issues requiring immediate triaging are 'jdk11 triageRequired' and 'test failure arch:aarch64 triageRequired'.,1
+An issue is reported causing test failures only in the jdk22 version but works fine in other versions. What labels should be applied?,"Labels should be test failure, jdk22",Is there an existing label for security issue?,No,,,"Yes, there is an existing label for security issue. The label found in the database is ""comp:vm, security"".",0.0,,,The query did not return any results.,0,"SQLResult: comp:vm, comp:gc",0.0,,Labels that should be applied are: test failure,1,"Answer: No, there are no labels specifically for security-related issues in the database.",1.0,,"Answer: Based on the query results, appropriate labels for an issue causing test failures specifically in jdk22 version but not in other versions could be ""test failure"", ""jdk22"", and possibly other relevant labels based on the specific details of the issue.",1,"Answer: No, there are no labels established for addressing security issues in the database.",1.0,,"comp:vm, test failure, jdk22",0,"Yes, the existing label for security issue can be found in the project's documentation or issue tracking system.",0.0,,Labels expected to apply based on the issue reported are 'comp:gc' and 'userRaised'.,0,,,,,"No, there are no labels that specifically address security-related issues in the database.",1.0,,,"Labels: test failure, jdk22, comp:vm",1
+I have identified an issue that blocks the release process. Label it,blocker,,,,,,,,,"The issue that blocks the release process is ""OpenJDK java/lang/String/ToLowerCase ArrayIndexOutOfBoundsException"" and it is labeled as ""test failure, arch:z, os:linux, release blocker"".",1,,,,"The identified issue that blocks the release process is titled ""OpenJ9-11 Incorrect array optimizations"" and is labeled as ""comp:jit"" and ""userRaised"".",0,,,,"labels
+comp:vm, userRaised",0,,,,"The issue that blocks the release process is labeled as a ""release blocker"".",1,,,,"The issue that blocks the release process is ""OpenJDK java/lang/String/ToLowerCase ArrayIndexOutOfBoundsException"" and it is labeled as ""test failure, architecture: z, OS: Linux, release blocker"".",1,,,,,,,,,"Final answer here: The label ""blocker"" should be assigned to the issue that is blocking the release process.",1
+Suggest existing labels to tag issue 18337,"comp:jit , jdk21",,,,,,,,,Existing labels to tag issue 18337 are 'test failure'.,0,,,,Existing labels to tag issue 18337 are 'test failure'.,0,,,,"Existing labels: test failure
+
+Recommended labels for tagging issue 18337 based on its content: test failure, java version, IBM Semeru Runtime, build failure",0,,,,"Existing labels to tag issue 18337 are ""test failure"".",0,,,,"Existing labels to tag issue 18337 are ""test failure"".",0,,,,,,,,,Existing labels that could be recommended for tagging issue 18337 are 'test failure'.,0

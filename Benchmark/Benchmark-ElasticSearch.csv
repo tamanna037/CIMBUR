@@ -1,0 +1,78 @@
+T1S-FQ,T1S-FA,T1-YNQ,T1-YNA,T1-SQ,T1-SA,,T1M-FQ,T1M-FA,T1M-YNQ,T1M-YNA,T1M-SQ,T1M-SA,,T2-FQ,T2-FA,T2-YNQ,T2-YNA,T2-SQ,T2-SA,,T3-FQ,T3-FA,T3-SQ,T3-SA,,T4-FQ,T4-FA,T4-YNQ,T4-YNA,T4-SQ,T4-SA,,T5-FQ,T5-FA,T5-YNQ,T5-YNA,T5-SQ,T5-SA
+What Elasticsearch Version is used in issue 100264?,8.*,is issue 104931 belongs to data management team?,Yes,Summarize how to solve issue 104160,by sorting the responses by creation time and only keeping the state for the most recent task if there is more than one.,.,Which issues are duplicate of issue 105840?,"105867, 105866",Is issue 105840 and 105867 similar?,Yes,"Summarize the similarities between issue 103072
+and 103344","Issues 103072 and 103344 both involve test failures within the LearningToRankRescorerIT class. The root cause of these failures stems from a named_object_not_found_exception and x_content_parse_exception, resulting in a 400 Bad Request status code. Both errors mention the absence of a specific field [learning_to_rank]",.,Find out the most frequently encountered error ,java.lang.IllegalArgumentException,Did Team:Security receive the most reports?,No,Provide a summary of the most frequently encountered error,"The most frequent error in the provided list is java.lang.IllegalArgumentException, occurring 7 times. T",.,Provide number of issues with milestone,1,Summarize the issues related to Data Management,"Issue 104931: A java.lang.RuntimeException occurs due to serialization issues with IngestStats, potentially leading to negative counts in IngestStats.Stats. This can result in a stack trace in the logs, particularly in scenarios involving markItemAsDropped or markItemAsFailed methods.                      Issue 98652: An java.lang.IllegalStateException arises when serializing composable index templates with negative versions, causing nodes to fail joining the cluster. The problem persists across multiple Elasticsearch versions. ",.,An issue is reported in StorageEngine. What label shoul i assign?,Team:StorageEngine,Is there an existing label specifically for user raised issues?,No,Summarize how to label a issue with team name,"labels will be begin with 'Team:' , followed by team name",.,List all the pending issues,"94839, 95347, 96594, 96639, 98652, 100264, 100887, 100964, 103072, 104278, 104160, 103840, 104931",Are there any blocker that remain unresolved over 1 month,Yes,Give me a summary of backlog issues  over 10 months,"Issue number 94839: It involves putting index settings in twice, which causes Elasticsearch to crash due to an java.lang.AssertionError. Issue number 95347: This issue relates to serialization exceptions that occur when attempting to serialize outbound messages. It results in  java.lang.IllegalArgumentException error"
+which java version used in issue 97350?,bundled,does issue 95917 reproduce?,Yes,Summarize the reproduction steps of issue 98652,"1. Create a cluster version 8.9.1 in Elasticsearch Service (ESS): single node, 1 availability zone (AZ)
+
+2. Add a composable index template with a negative version:
+
+Notice that the API is successfully acknowledged.
+
+3. Scale-up the cluster from 1 AZ to 2 AZ
+
+4. Observe that the second node is unable to join the cluster. Checking the Elasticsearch logs, the below warning message can be observed",.,Find issues similar to 103072,103344,Is issue 105840 and 103072 similar?,No,Provide a summary of all issues similar to issue 105867,"Issue 105866, which involves the failure of the JdbcResultSetIT test case testUnsupportedGetMethods, has been closed. The issue was categorized as a blocker and flagged for triage. The failure was observed during the build scan provided in the ticket. The reproduction line for the failure was provided along with applicable branches and failure history. The failure excerpt indicates a java.sql.SQLException caused by a java.time.zone.ZoneRulesException, leading to an x_content_parse_exception.
+
+In issue 105840, the failure in the JdbcResultSetIT testGettingTimeWithCalendar is due to a java.sql.SQLException caused by a java.time.zone.ZoneRulesException. The exception indicates that the time zone ID ""America/Ciudad_Juarez"" is unknown, resulting in a parsing failure when processing the query
+
+
+",.,Which team is the most error prone,Team:Core/Infra,Has there been most issues Search related in last 3 months?,no,Summarize the recurring themes in bug reports of team:search ,"104931 and 98652 involve problems with serialization. In the former, a java.lang.RuntimeException occurs due to serialization issues with IngestStats, potentially leading to negative counts in IngestStats.Stats. In the latter, a java.lang.IllegalStateException arises when serializing composable index templates with negative versions, causing nodes to fail joining the cluster. T",.,summarize all team:ml issue number and their current status,"104160 open, 103414 closed, 98552 closed, 100311 closed, 104981 closed, 103072 open, 103344 closed",Compile a summary of unresolved issues that have been created within 2 months,"Issue 104931: A java.lang.RuntimeException occurs due to serialization issues with IngestStats, potentially leading to negative counts in IngestStats.Stats. This can result in a stack trace in the logs, particularly in scenarios involving markItemAsDropped or markItemAsFailed methods.",.,What existing label is recommended for issues that needs immediate triaging?,needs:triage,"In in this project, is there label for team?",Yes,Summarize all the team labels of this project,"Team: Security
+Team: Core/Infra
+Team: Distributed
+Team: Data Management
+Team: ML
+Team: Enterprise Search
+Team: Analytics
+Team: Search
+Team: Core/Infra (Deprecated)
+Team: QL (Deprecated)
+Team: StorageEngine
+",.,Find open blocker issues older than 2 months,103072,Are there backlog issues over 10 months?,Yes,,
+which os version used in issue 96078?,docker.elastic.co/elasticsearch/elasticsearch:8.7.1,does issue 103414 face java.lang.assertionError?,No,Summarize the steps taken to reproduce issue 103765,"Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
+Index data into the new node only
+Run this query against the old node
+from employees | stats m = median(salary_change), p50 = percentile(salary_change, 50)",.,Find duplicate reports of the 18694?,"95013 , 104931",Has there been any ElasticsearchSecurityException in the existing issues?,Yes,,,,What type of issues has shown more frequent in the last three months?,bug,"In the last 6 month, did team:ml face most bugs?",Yes,,,,,,Summarize the issue 104981,"Issue 104981: In Elasticsearch version 8.12.0 on Linux x86, running inference using the XML-RoBERTa model fails when the input contains mixed emojis and strings. The error message indicates an ArrayIndexOutOfBoundsException, specifically stating ""Index 33 out of bounds for length 32"". Reproducing the issue involves importing the model and testing it with specific emoji-containing text.",.,What should i label a issue of low risk?,low-risk,Is there an existing label for ML issue?,Yes,,,,Find pending issues with milestone ,None,Is there any pending issue for team security?,Yes,,
+what is the exception in issue 104278,org.elasticsearch.action.search.SearchPhaseExecutionException: all shards failed,can issue 105206 be reproduced locally?,no,Summarize the difference in server vs client log in issue 103840,"Server Log: 
+java.util.concurrent.ExecutionException
+caused by java.io.EOFException
+Client Log:  
+org.elasticsearch.ElasticsearchException",.,Find all issues related to java.lang.UnsupportedOperationException error ,"94673 , 99700",,,,,,Identify the team which encountered the most bug in last 6 months,Team:ML,Has team:Core/Infra experienced the highest number of errors compared to other teams?,Yes,,,,,,Short Summary of the issue 98076,"Issue 98076: In Elasticsearch versions 8.8.2 to 8.9.0, using a global aggregation against a filtered alias with a terms filter causes all search requests to fail with an unsupported_operation_exception. This error occurs because the query for the global aggregation does not implement createWeight. A workaround is to replace the terms filter with a terms_set filter or a verbose bool / should filter without a minimum should match",.,Suggest labels for security related issue ,":Security/Security, Team:Security",,,,,,Give me a list of low risk pending issues,96639,,,,
+What exception occured in the issue 104931,java.lang.RuntimeException: null,"in issue 94839, does crash occurs on  a node in the cluster due to the error?",Yes,Summarize the error message for issue 17638,Duplicate key datafeed-v3_linux_system_user_discovery,.,How many duplicate reports have been found for issue 105840?,2,,,,,,,,,,,,,,,Compile a summary of open blocker issues,"Issue 103072 involves the LearningToRankRescorerIT test failing. The failure occurs due to a named_object_not_found_exception when parsing the inference_config. Specifically, the error indicates an unknown field [learning_to_rank]. The issue is reproducible in the main branch and has been reported as a blocker. More information, including build scans and applicable branches, can be found in the provided links.  Issue 99183  is closed. It involved an error occurring when loading text fields from indexes with synthetic source. The error message was ""Cannot access source from scripts in synthetic mode. Querying for the text field resulted in an IllegalArgumentException.",.,Suggest labels for search related issue ,"Search/Search, Team:Search",,,,,,Find out test failure issues that have been open for more than 8 months?,96639,,,,
+which team is reponsible for issue 104160,team:ml,doe issue 94839 occurs on v8.11.3?,Yes,Summarize the problem description of issue 17137,"Running a ""_terms_enum"" request on a keyword field with index: false setting can very likely throws UnsupportedOperationException.
+
+This happens under two conditions. The field queries by the ""_terms_enum"" has index disabled (""index"" : false),
+which means its docvalues only. This isn't the default but could happen.
+The second condition is that a shard has more than one segment. The code path that is then executed throws the following exception",.,,,,,,,,,,,,,,,,,Can you generate a summary of all issues tagged as 'team:ql'?,"Issue 101455 is closed, involved benchmarking queries failing after a new way of loading values PR in multi-index queries. The failure occurred after merging a specific commit. The provided stack trace indicated a NullPointerException caused by attempting to invoke java.lang.CharSequence.length() on a null value. This occurred during the processing of the ESQL queries.",.,,,,,,,,Which is the long most pending issue?,94839,,,,
+what is the workaround of issue 98652,Workaround would be to update the version to a positive value for all affected composable index templates.,"is issue 105822 locally reproduced?
+
+",Yes,,,.,,,,,,,,,,,,,,,,,Generate summary of low risk issues,"The issue 96639  involves a test failure in the javaRestTestAfterRestart#6_8_20 task The failure occurred with the error message ""process was found dead while waiting for ports files.""The java.lang.IllegalStateException exception specifically indicates this problem.",.,,,,,,,,,,,,,
+what is the applicable branches for issue 95917?,eyalkoren:ingest-pipeline-registry,is issue 105822 a low risk one?,yes,,,.,,,,,,,,,,,,,,,,,Generate a report detailing the age of open issues by month,"[(94839, 11), (95347, 11), (96594, 9), (96639, 9), (98652, 7), (100264, 5), (100887, 5), (100964, 5), (103072, 3), (104278, 2), (104160, 2), (103840, 2), (104931, 1)]",.,,,,,,,,,,,,,
+what  error is mentioned in 103414?,java.util.concurrent.TimeoutException,is the issue 100082 produce on mac os?,Yes,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What triggered the exception in issue 100130?,java.lang.IllegalArgumentException,"in issue 105068 , is there any installed Plugins?",No,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+what is the applicable branches for issue 98552?,main,is the issue 97494 produce on mac os?,No,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+show the file name where error occurs in 100311,DataExtractor.java,does issue 103840 use jdk8?,No,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Give me the exception message reported in issue 105206,"FieldExistsQuery requires that the field indexes doc values, norms or vectors, but field '_primary_term' exists and indexes neither of these data structures",,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"for issue 94839, where should be the Serialization exceptions handled?",OutboundHandler,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What is the version of openjdk reported in issue 103018?,21.0.1,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+what is the version os for issue 98076?,ESS,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+which team is reponsible for issue 105822?,team:core/infra,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+which action can leak memory on the REST layer by trying to send a failure response twice in issue 102111?,org.elasticsearch.xpack.security.SecurityUsageTransportAction#masterOperation,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Which line of LocalExecutionPlanner, error occurs in issue 103765?",536,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+in which method the exception occurs in issue 96594,setMaxThreadAndMergeCount,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What Elasticsearch Version is used in issue 100264?,8.12.0,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+for which task CI failed in issue 96639,:x-pack:qa:repository-old-versions:javaRestTestAfterRestart#6_8_20,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+what is the nature of the failure in issue 100082?,java.lang.reflect.InvocationTargetException caused by  java.lang.AssertionError,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+which two queries in elastic/logs benchmark are failing in issue 101455,"esql_time_range_and_date_histogram_two_groups_pre_filter
+esql_time_range_and_date_histogram_two_groups_post_filter",,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"At the time of loading from indexes with synthetic source, on which field does the error encounter in issue 99183? ",text,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Tell the step to produce issue 105068,Unmute and repeatedly run org.elasticsearch.xpack.downsample.DataStreamLifecycleDownsampleDisruptionIT/testDataStreamLifecycleDownsampleRollingRestart,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+what is the error type in issue 100887,circuit_breaking_exception,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+which test failed in issue 95013?,MixedClusterClientYamlTestSuiteIT,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+which part of search moduel issue 100071 occur?,Highlighting,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Name the test that have been mentioned in issue 97494,StringTemplatePluginTest,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+which os version is need for issue 97494?,Linux x86,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+show me the client log in issue 103840,"Caused by: [index0/data0][[index0][91]] ElasticsearchException[Elasticsearch exception [type=engine_exception, reason=Couldn't resolve version]]; nested: ElasticsearchException[Elasticsearch exception [type=illegal_state_exception, reason=document [0] does not have docValues for [_primary_term]]];
+        at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:496)",,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+what is the type of issue 100964?,"Analytics/Aggregations
+bug",,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Which team were involved in the reported failure in issue 94673?,Team:Search,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Which elasticSearch version is associated with the reported failures in issue 95347?,8.8.0-SNAPSHOT,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
