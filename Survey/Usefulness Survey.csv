@@ -1,0 +1,134 @@
+What is your current role within the organization?,How many years of experience do you have in software development industry?,"Query: Summarize the failures of this issue
+
+Response 1: The failure details for issue 99700, titled ""Plain highlighter throws UOE when using a script_score query wrapping an exists query"", include the exception ""java.lang.UnsupportedOperationException"" and a stack trace that starts with ""Caused by: java.lang.UnsupportedOperationException"". The relevant information in the body of the issue mentions the Elasticsearch Version being 8.10, Installed Plugins with no response, Java Version as bundled, OS Version as unix, and a problem description related to highlighting a script_score query wrapping an exists query using the plain highlighter.
+
+Response 2: The failure of issue 99700 was related to the Plain highlighter throwing UOE when using a script_score query wrapping an exists query.
+Which one do you believe is more correct and useful? ",Please select the reason why you chose this response:,"Summarize the similarities between issue 17638 and issue 18487
+
+
+Response 1: The similarities between issue 17638 and issue 18487 are that they both have multiple comments, were created in 2023, and are still open. They also both have test failures and are related to the Java language.
+
+
+Response 2: The similarities in exceptions, stack traces, and descriptions between issues 17638 and 18487 are as follows: - Both issues involve Java exceptions being thrown. - Issue 17638 has an `org.opentest4j.AssertionFailedError` with a specific message related to duration comparison, while issue 18487 has a `java.lang.AssertionError`. - Both issues have stack traces that point to specific Java classes and methods where the exceptions occurred. - The descriptions of the issues provide additional context and links to internal builds or test results related to the failures. 
+Which one do you believe is more correct and useful? ",Please select the reason why you chose this response:,"Query: Summarize the recurring themes in bug reports of jit component
+
+Response 1:  The recurring themes in bug reports of the JIT component are related to test failures, user-raised issues, and specific optimizations.
+
+Response 2: Based on the verified source, the common patterns in bug reports related to the JIT component include titles like ""memoryPoolMXBean.getUsage will throw exception when gcpolicy is balanced,"" exceptions such as java.lang.IllegalArgumentException and java.lang.UnsatisfiedLinkError, bodies containing details about the encountered issues, and labels like comp:gc, comp:vm, and comp:jit.
+
+Considering the responses provided without specific context,  which one do you believe is more useful? ",Please select the reason why you chose this response:,"Query: Are there any particular component that seem to be more prone to issues compared to others?
+
+Response 1: Yes, there are several components that have a higher frequency of reported issues than others. The top three components with the highest frequency of reported issues are 'test failure', 'comp:vm', and 'userRaised'.
+
+
+Response 2: Based on the data in the ""issues"" table, the components that seem to be more prone to issues compared to others are:
+1. ""test failure"" with a total of 5 issues
+2. ""comp:vm, userRaised"" with a total of 3 issues
+3. ""userRaised"" with a total of 2 issues
+4. ""test failure, comp:fips"" with a total of 2 issues
+5. ""comp:vm, test failure, jdk22"" with a total of 2 issues
+
+
+Considering the responses provided without specific context, which one do you believe is more useful? 
+",Please select the reason why you chose this response:,"Query: Compile a summary of unresolved issues not older than 2 months
+
+Response 1:  
+
+
+Title: Tighten up exception handling around markItemAsDropped/markItemAsFailed
+Exception: java.lang.RuntimeException: null
+Body: There's been a lot of issues with serialization of `IngestStats`, and having the stats themselves sometimes go negative (due to a bad code path double decrementing the 'ingestCurrent' count of the `IngestStats.Stats`).
+Labels: >bug, :Data Management/Ingest Node, Team:Data Management
+
+
+Response 2: There is 1 unresolved issue not older than 2 months. The issue number is 104931, the title is 'Tighten up exception handling around markItemAsDropped/markItemAsFailed', it has 1 comment, was created on 2024-01-30, and the creator is joegallo.
+
+
+Which one do you believe is more correct and useful?  Check with the issue report.
+",Please select the reason why you chose this response:,"Query:  Generate a summary of all issues tagged as 'comp:fips'
+
+Response 1: There are currently 2 open issues tagged as 'comp:fips': 
+Issue number 18043 titled 'FIPS JDK17 jdk_security2_0_FAILED javax/crypto/CipherSpi/CipherByteBufferOverwriteTest.java ERROR: Ciphertext does not match' created on 2023-08-29 by JasonFengJ9. 
+Issue number 18277 titled 'FIPS sun/security/pkcs11/Secmod/TrustAnchors.java ProviderException: Secmod directory /etc/pki/nssdb invalid, NSS already initialized with sun/security/pkcs11/Secmod/TrustAnchors.d/tmpdb' created on 2023-10-12 by JasonFengJ9.
+
+
+Response 2: 
+Title:
+FIPS JDK17 jdk_security2_0_FAILED javax/crypto/CipherSpi/CipherByteBufferOverwriteTest.java ERROR: Ciphertext does not match 
+FIPS sun/security/pkcs11/Secmod/TrustAnchors.java ProviderException: Secmod directory /etc/pki/nssdb invalid, NSS already initialized with sun/security/pkcs11/Secmod/TrustAnchors.d/tmpdb 
+
+
+ Exception: 
+ java.lang.Exception: ERROR: Ciphertext does not match 
+java.security.ProviderException: Secmod directory /etc/pki/nssdb invalid, NSS already initialized with... 
+Body: 
+Failure link ------------ From [an internal build](https://hyc-runtimes-jenkins.swg-devops.com/job/Test_openjdk17_j9_sanity.openjdk_x86-64_linux_fips_testList_0/59/)(`rhel8x64-fips4-1`): ``` java version ""17.0.8.1"" 2023-08-24 IBM Semeru Runtime Certified Edition 17.0.8.1 (build... 
+ Failure link ------------ From [an internal build](https://hyc-runtimes-jenkins.swg devops.com/job/Test_openjdk11_j9_extended.openjdk_x86-64_linux_fips140_2_testList_2/3/)(`rhel8x64-fips4-1`): ``` openjdk version ""11.0.21"" 2023-10-17 IBM Semeru Runtime Open Edition... 
+
+
+ Labels: 
+test failure \n comp:fips 
+test failure \n comp:fips
+
+Which one do you believe is more correct and useful?  Check with the issue reports: Report 1 & Report 2
+",Please select the reason why you chose this response:,"Query: Explain for an issue affecting multiple components, how should it be labeled?
+
+Response 1:  For an issue affecting multiple components, it should be labeled with the relevant components separated by commas in the 'labels' column. Examples of such labels include 'comp:gc, userRaised', 'comp:vm, userRaised', 'test failure, arch:z, os:linux, release blocker', etc.
+
+
+Response 2: The labeling approach for an issue impacting multiple components involves using labels such as 'comp:gc', 'comp:vm', 'comp:jit', 'comp:test', 'comp:infra', 'comp:fips', 'comp:jvmti', 'comp:jclextensions', and more.
+
+Which one do you believe is more correct and useful? 
+",Please select the reason why you chose this response:,"Query: Suggest existing labels for this issue
+
+
+
+
+Response 1: Existing labels to tag this issue are 'test failure'.
+
+
+Response 2: Existing labels that could be recommended for tagging this issue are 'test failure' and 'jdk21'
+
+
+
+Which one do you believe is more correct and useful? 
+",Please select the reason why you chose this response:,"Query: Find the long-standing unresolved issues that have been consistently postponed
+
+Response 1: The issue numbers of the unresolved issues consistently postponed are 18487, 18277, 18043, 18001, 17995, 17852, 17843, 17458, 17137, and 17063.    
+
+
+Response 2: There are several long-standing unresolved issues that have been consistently postponed. Some examples include:
+Issue number 17638 titled 'OpenJDK java/lang/Thread/SleepSanity Duration 999ms, expected >= 1000ms' created on 2023-06-22 with milestone 'Backlog'. 
+ Issue number 18102 titled 'jdk_lang_j9_0_FAILED java/lang/String/NonCharacterMapping.java ArrayIndexOutOfBoundsException at java.base/java.lang.CharacterDataLatin1.getProperties(CharacterDataLatin1.java:74)' created on 2023-09-08 with milestone 'Release 0.46 (Java 8, 11, 17, 21, 22) July refresh'.
+ Issue number 18400 titled 'Apache Lucene CI builds sometimes fail with OpenJ9 specific issues' created on 2023-11-04 with milestone 'Release 0.46 (Java 8, 11, 17, 21, 22) July refresh'. 
+ Issue number 18669 titled 'OpenJDK java/lang/Character/CharPropTest - ArrayIndexOutOfBoundsException' created on 2023-12-21 with milestone 'Release 0.46 (Java 8, 11, 17, 21, 22) July refresh'. 
+Issue number 18763 titled 'JDK21 serviceability/jvmti/vthread/GetThreadState/GetThreadStateTest.java FAILED GetThreadStateTest::testRunnable & timedout' created on 2024-01-15 with milestone 'Release 0.46 (Java 8, 11, 17, 21, 22) July refresh'.
+Issue number 19014 titled 'OpenJ9-11 Incorrect array optimizations' created on 2024-02-26 with milestone 'Release 0.46 (Java 8, 11, 17, 21, 22) July refresh'.""
+
+
+Both answer are correct. Response 1 provides a full list of unresolved pending issues  while Response 2 gives a partial list but offers additional context or details about each issue.
+
+
+Considering this, which one do you believe is more useful in this scenario? 
+
+",Please select the reason why you chose this response,"Query: List blocker issues that are open for than 2 months
+
+
+Response 1:  There is 1 blocker issue that is open for more than 2 months
+Response 2: Issue number 103072 is an open blocker issue that is more than 2 months old
+
+
+Both responses are correct. Considering this, which one do you believe is more useful in this scenario? 
+
+",Please select the reason why you chose this response
+Developer,0-5 years,Response 2,"The response seems correct, The response is thorough and covers all necessary aspects.",Response 2,"The response seems correct, The response is clear and easy to follow.",Response 1,The response is thorough and covers all necessary aspects.,Response 2,"The response is clear and easy to follow., The response is concise and to the point., The response provides additional information which was helpful in understanding the problem better.",Response 1,The response is thorough and covers all necessary aspects.,Response 1,"The response is clear and easy to follow., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response is clear and easy to follow., The response is thorough and covers all necessary aspects.",Response 1,The response is clear and easy to follow.,Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 1,The response provides additional information which was helpful in understanding the problem better.
+Developer,0-5 years,Response 1,The response is thorough and covers all necessary aspects.,Response 1,The response is clear and easy to follow.,Response 1,The response is thorough and covers all necessary aspects.,Response 2,The response is concise and to the point.,Response 1,The response provides additional information which was helpful in understanding the problem better.,Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,The response is clear and easy to follow.,Response 1,The response provides additional information which was helpful in understanding the problem better.,Response 2,"The response provides additional information which was helpful in understanding the problem better., ",Response 2,The response provides additional information which was helpful in understanding the problem better.
+Developer,0-5 years,Response 2,"The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 2,The response is clear and easy to follow.,Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 2,The response is thorough and covers all necessary aspects.,Response 1,The response is clear and easy to follow.,Response 1,The response is concise and to the point.,Response 2,The response is thorough and covers all necessary aspects.,Response 2,The response is thorough and covers all necessary aspects.
+Developer,0-5 years,Response 1,"The response is clear and easy to follow., The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response is clear and easy to follow., The response is thorough and covers all necessary aspects.",Response 1,The response is concise and to the point.,Response 1,The response is concise and to the point.,Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 2,The response is concise and to the point.,Response 2,"The response is concise and to the point., The response is thorough and covers all necessary aspects.",Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response is thorough and covers all necessary aspects., The response is clear and easy to follow., The response is concise and to the point."
+Other,0-5 years,Response 1,The response is thorough and covers all necessary aspects.,Response 2,The response seems correct,Response 2,The response is clear and easy to follow.,Response 2,The response seems correct,Response 1,The response seems correct,Response 2,"The response is clear and easy to follow., The response is thorough and covers all necessary aspects.",Response 1,The response seems correct,Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,The response provides additional information which was helpful in understanding the problem better.
+Other,0-5 years,Response 1,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 1,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 1,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point., The response is thorough and covers all necessary aspects.",Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point., The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point., The response is thorough and covers all necessary aspects.",Response 1,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response is thorough and covers all necessary aspects., The response is clear and easy to follow., The response is concise and to the point., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response is thorough and covers all necessary aspects., The response is clear and easy to follow., The response is concise and to the point."
+Developer,0-5 years,Response 1,The response is clear and easy to follow.,Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,The response is thorough and covers all necessary aspects.,Response 1,The response is concise and to the point.,Response 1,The response is thorough and covers all necessary aspects.,Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 1,The response is thorough and covers all necessary aspects.,Response 2,The response is clear and easy to follow.,Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,The response is thorough and covers all necessary aspects.
+Other,0-5 years,Response 1,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 1,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 1,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response seems correct, The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 1,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response seems correct, The response is thorough and covers all necessary aspects.",Response 1,"The response is clear and easy to follow., The response is concise and to the point.",Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better."
+ML Engineer,0-5 years,Response 1,The response provides additional information which was helpful in understanding the problem better.,Response 2,The response is thorough and covers all necessary aspects.,Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,"The response is concise and to the point., The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,"The response is clear and easy to follow., The response provides additional information which was helpful in understanding the problem better.",Response 1,"The response is clear and easy to follow., The response is thorough and covers all necessary aspects.",Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 2,"The response is concise and to the point., The response provides additional information which was helpful in understanding the problem better."
+"Developer, Graduate Research Assistant",0-5 years,Response 1,"The response seems correct, The response is thorough and covers all necessary aspects.",Response 2,"The response seems correct, The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 1,The response is thorough and covers all necessary aspects.,Response 1,The response is concise and to the point.,Response 1,"The response seems correct, The response is concise and to the point., The response is thorough and covers all necessary aspects.",Response 2,"The response seems correct, The response is thorough and covers all necessary aspects.",Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,The response is thorough and covers all necessary aspects.
+Developer,0-5 years,Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,The response provides additional information which was helpful in understanding the problem better.,Response 1,The response seems correct,Response 1,The response provides additional information which was helpful in understanding the problem better.,Response 1,"The response is clear and easy to follow., The response is thorough and covers all necessary aspects., The response provides additional information which was helpful in understanding the problem better.",Response 2,"The response seems correct, The response is clear and easy to follow.",Response 2,The response seems correct,Response 1,The response is concise and to the point.,Response 2,"The response is clear and easy to follow., The response is concise and to the point."
