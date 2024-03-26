@@ -1,2 +1,2 @@
-# CIMBUR
-Hallucination Mitigation for Bug Reports
+# CHIME - ChatGPT Inaccuracy Mitigation Engine
+
