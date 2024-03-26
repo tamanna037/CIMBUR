@@ -1,4 +1,4 @@
-T3-FQ,T3-FA,T3-SQ,T3-SA,T3-SA_LLM,T3-S_LLM_R,T3-FA_LLM,T3-FA_LLM_R,T3-SA_CIMBUR,T3-S_CIMBUR_R,T3-FA_CIMBUR,T3-FA_CIMBUR_R,T3-SA_CFG,T3-S_CFG_R,T3-FA_CFG,T3-FA_CFG_R,T3-SA_Query,T3-S_Query_R,T3-FA_Query,T3-FA_Query_R,T3-SA_MT,T3-S_MT_R,T3-FA_MT,T3-FA_MT_R,T3-SA_COVE,T3-S_COVE_R,T3-FA_COVE,T3-FA_COVE_R,T1S-FA_LLM_R,T1S-FA_CFG_R
+T3-FQ,T3-FA,T3-SQ,T3-SA,T3-SA_LLM,T3-S_LLM_R,T3-FA_LLM,T3-FA_LLM_R,T3-SA_CIMBUR,T3-S_CIMBUR_R,T3-FA_CIMBUR,T3-FA_CIMBUR_R,T3-SA_CFG,T3-S_CFG_R,T3-FA_CFG,T3-FA_CFG_R,T3-SA_Query,T3-S_Query_R,T3-FA_Query,T3-FA_Query_R,T3-SA_MT,T3-S_MT_R,T3-FA_MT,T3-FA_MT_R,T3-SA_COVE,T3-S_COVE_R,T3-FA_COVE,T3-FA_COVE_R,T1S-FA_LLM_R,T1S-FA_CFG_R,T3-SA_COVE_MT,T3-S_COVE_MT_R,T3-FA_COVE_MT,T3-FA_COVE_MT_R
 Find all test failure issues assigned to analytics team,"95013 , 105840",Summarize the issues related to Data Management,"Issue 104931: Tighten up exception handling around markItemAsDropped/markItemAsFailed. A java.lang.RuntimeException occurs due to serialization issues with IngestStats, potentially leading to negative counts in IngestStats.Stats.
 Issue 98652: Node is unable to join the cluster due to negative version in composable index template due to An java.lang.IllegalStateException.","There are currently 2 open issues related to Data Management:
 1. Issue number 98652 titled ""Node is unable to join the cluster due to negative `version` in composable index template"" created by romain-chanu on 2023-08-21 with 3 comments.
@@ -64,7 +64,8 @@ Labels: :Analytics/Aggregations, >test-failure, Team:Analytics
 Issue Assignees: None
 Milestone: None
 Body: Three tests failed with the same error:
-- [test {p0=aggregations/filter/Terms lookup gets cached}",0.0,,
+- [test {p0=aggregations/filter/Terms lookup gets cached}",0.0,,,There are no problems related to Data Management in the provided issues data.,0,"The titles of the test failure issues assigned to the analytics team are:
+1. [CI] MixedClusterClientYamlTestSuiteIT test {p0=aggregations/filter/Terms lookup gets cached} failing",0
 summarize all team:ml issue number and their current status,"Issue number 104160 open
 Issue number 103414 closed
 Issue number 98552 closed
@@ -83,7 +84,15 @@ Labels: >bug, :Data Management/Ingest Node, Team:Data Management",0,"Issue numbe
 - Issue number 103414 is closed
 - Issue number 104160 is open
 - Issue number 104981 is closed",1.0,"There is 1 unresolved issue that has been created within a 2-month period:
-- Issue number 104931 titled ""Tighten up exception handling around markItemAsDropped/markItemAsFailed"" was created on 2024-01-30 by joegallo.",1,"Issue number 98552 is closed, issue number 100311 is closed, issue number 103072 is open, issue number 103344 is closed, issue number 103414 is closed, issue number 104160 is open, and issue number 104981 is closed.",1.0,"There is 1 unresolved issue, number 104931, that has been created within the last 2 months. The issue involves serialization issues with `IngestStats` leading to negative stats due to a code path double decrementing the 'ingestCurrent' count of the `IngestStats.Stats`. It is related to projects or modules such as Distributed/Network, Core/Infra/Settings, Search/Search, and Data Management. The issue was created on March 28, 2023.",0,Issue number 98552 is closed. Issue number 100311 is closed. Issue number 103072 is open. Issue number 103344 is closed. Issue number 103414 is closed. Issue number 104981 is closed.,1.0,,
+- Issue number 104931 titled ""Tighten up exception handling around markItemAsDropped/markItemAsFailed"" was created on 2024-01-30 by joegallo.",1,"Issue number 98552 is closed, issue number 100311 is closed, issue number 103072 is open, issue number 103344 is closed, issue number 103414 is closed, issue number 104160 is open, and issue number 104981 is closed.",1.0,"There is 1 unresolved issue, number 104931, that has been created within the last 2 months. The issue involves serialization issues with `IngestStats` leading to negative stats due to a code path double decrementing the 'ingestCurrent' count of the `IngestStats.Stats`. It is related to projects or modules such as Distributed/Network, Core/Infra/Settings, Search/Search, and Data Management. The issue was created on March 28, 2023.",0,Issue number 98552 is closed. Issue number 100311 is closed. Issue number 103072 is open. Issue number 103344 is closed. Issue number 103414 is closed. Issue number 104981 is closed.,1.0,,,"There is 1 unresolved issue that has been created within the last 2 months. The details of the unresolved issue are as follows:
+- Issue Number: 104931
+- Title: Tighten up exception handling around markItemAsDropped/markItemAsFailed
+- State: Open
+- Number of Comments: 1
+- Created Date: 2024-01-30
+- Issue Creator: joegallo
+- Labels: >bug, :Data Management/Ingest Node, Team:Data Management
+- Body: There's been a lot of issues with serialization of `IngestStats`, and having the stats themselves sometimes go negative (due to a bad code path double decrementing the 'ingestCurrent' count of the `IngestStats.Stats`). See https://github.com/elastic/elasticsearch/issues/52339",0,Issue number 103072 is open and issue number 104160 is open.,1
 ,,Summarize the issue 104981,"Issue 104981: In Elasticsearch version 8.12.0 on Linux x86, running inference using the XML-RoBERTa model fails when the input contains mixed emojis and strings. The error message indicates an ArrayIndexOutOfBoundsException, specifically stating ""Index 33 out of bounds for length 32"". Reproducing the issue involves importing the model and testing it with specific emoji-containing text.","The issue 104981 titled '[ML] _infer using XML-RoBERTa model failed when input contains emojis' was created by wwang500 on 2024-01-31, closed on 2024-02-06, had 2 comments, falls under the >bug, :ml, Team:ML labels, and the body contains information about the Elasticsearch Version being 8.12.0 and the OS Version being Linux x86. The problem description mentions issues with running inference using the XML-RoBERTa model when input contains certain mixed emojis and strings.",1,,,"Title: [ML] _infer using XML-RoBERTa model failed when input contains emojis
 Body: ### Elasticsearch Version
 
@@ -111,7 +120,7 @@ Linux x86
 ### Problem Description
 
 While running inference using XML-RoBERTa model: **02shanky/finetuned-twitter-xlm-roberta-base-emotion**, if input contains certain mixed emojis and strings , such as: `😱😱😱😱😱😱this is weird`,...
-Labels: >bug, :ml, Team:ML",1,,,"The issue 104981 titled '[ML] _infer using XML-RoBERTa model failed when input contains emojis' was closed with 2 comments. It was created on 2024-01-31 and closed on 2024-02-06 by wwang500. The labels associated with this issue were '>bug, :ml, Team:ML'. The problem description mentioned issues with running inference using the XML-RoBERTa model when input contains certain mixed emojis and strings. The Elasticsearch version used was 8.12.0.",1,,,"The issue 104981 titled '[ML] _infer using XML-RoBERTa model failed when input contains emojis' was created by wwang500 on January 31, 2024, closed on February 6, 2024, had 2 comments, falls under the Bug, ML, Team:ML labels, and had the following problem description: ""While running inference using XML-RoBERTa model: **02shanky/finetuned-twitter-xlm-roberta-base-emotion**, if input contains certain mixed emojis and strings, such as: `😱😱😱😱😱😱this is weird`"".",1,,,,
+Labels: >bug, :ml, Team:ML",1,,,"The issue 104981 titled '[ML] _infer using XML-RoBERTa model failed when input contains emojis' was closed with 2 comments. It was created on 2024-01-31 and closed on 2024-02-06 by wwang500. The labels associated with this issue were '>bug, :ml, Team:ML'. The problem description mentioned issues with running inference using the XML-RoBERTa model when input contains certain mixed emojis and strings. The Elasticsearch version used was 8.12.0.",1,,,"The issue 104981 titled '[ML] _infer using XML-RoBERTa model failed when input contains emojis' was created by wwang500 on January 31, 2024, closed on February 6, 2024, had 2 comments, falls under the Bug, ML, Team:ML labels, and had the following problem description: ""While running inference using XML-RoBERTa model: **02shanky/finetuned-twitter-xlm-roberta-base-emotion**, if input contains certain mixed emojis and strings, such as: `😱😱😱😱😱😱this is weird`"".",1,,,,,"The issue 104981 titled '[ML] _infer using XML-RoBERTa model failed when input contains emojis' was created on January 31, 2024 by wwang500. It is a closed issue with 2 comments and was closed on February 6, 2024. The problem described in the body of the issue is related to running inference using the XML-RoBERTa model and encountering issues when input contains certain mixed emojis and strings. The Elasticsearch version mentioned in the description is 8.12.0.",1,,
 ,,Short Summary of the issue 98076,"Issue 98076: In Elasticsearch versions 8.8.2 to 8.9.0, using a global aggregation against a filtered alias with a terms filter causes all search requests to fail with an unsupported_operation_exception. This error occurs because the query for the global aggregation does not implement createWeight. A workaround is to replace the terms filter with a terms_set filter or a verbose bool / should filter without a minimum should match","Short Summary of the issue 98076: The issue titled '`global` aggregation breaks with `terms` filter in filtered alias' was created by pickypg in the Analytics/Aggregations team. It was closed with 2 comments on August 1, 2023. The problem description mentions that the issue occurs in Elasticsearch versions 8.8.2 and 8.9.0.",1,,,"Issue 98076 is titled ""`global` aggregation breaks with `terms` filter in filtered alias"". The body of the issue describes a problem with Elasticsearch versions 8.8.2 and 8.9.0 where a specific aggregation breaks when using a `terms` filter in a filtered alias. The exception stack trace mentions an `unsupported_operation_exception` related to a query role not implementing `createWeight`. The labels associated with this issue are '>bug', ':Analytics/Aggregations', and 'Team:Analytics'.",1,,,"Short Summary of the issue 98076: The issue titled '`global` aggregation breaks with `terms` filter in filtered alias' was closed on 2023-07-31. The problem description mentions that this issue occurs in Elasticsearch versions 8.8.2 and 8.9.0, but not in version 8.5.x.",1,,,"Title: `global` aggregation breaks with `terms` filter in filtered alias
 Body: ### Elasticsearch Version
 
@@ -134,7 +143,7 @@ ESS
 Note: This is broken in at least both 8.8.2 and 8.9.0. However, I have an instance running with 8.5.x and it does not fail there.
 
 While using a...
-Labels: >bug, :Analytics/Aggregations, Team:Analytics",1,,,Short Summary of the issue 98076: The problem with code 98076 is that the '`global` aggregation breaks with `terms` filter in filtered alias'.,0,,,"Short Summary of the issue 98076: The issue titled '`global` aggregation breaks with `terms` filter in filtered alias' was created by pickypg on 2023-07-31, had 2 comments, and was closed on 2023-08-01. It falls under the categories of bug, Analytics/Aggregations, and Analytics team.",0,,,,
+Labels: >bug, :Analytics/Aggregations, Team:Analytics",1,,,Short Summary of the issue 98076: The problem with code 98076 is that the '`global` aggregation breaks with `terms` filter in filtered alias'.,0,,,"Short Summary of the issue 98076: The issue titled '`global` aggregation breaks with `terms` filter in filtered alias' was created by pickypg on 2023-07-31, had 2 comments, and was closed on 2023-08-01. It falls under the categories of bug, Analytics/Aggregations, and Analytics team.",0,,,,,"Short Summary of the issue 98076: The problem with code 98076 was titled '`global` aggregation breaks with `terms` filter in filtered alias'. It was reported by pickypg, had 2 comments, was created on 2023-07-31, closed on 2023-08-01, and belonged to the Analytics/Aggregations team.",0,,
 ,,Compile a summary of open blocker issues,"Issue 103072: involves the LearningToRankRescorerIT test failing. The failure occurs due to a named_object_not_found_exception when parsing the inference_config. 
  Issue 99183: involves an error occurring when loading text fields from indexes with synthetic source. The error message was ""Cannot access source from scripts in synthetic mode. Querying for the text field resulted in an IllegalArgumentException.","There is currently 1 open blocker issue:
 - Issue number: 103072
@@ -159,7 +168,13 @@ Labels: >bug, :Analytics/Aggregations, Team:Analytics",1,,,Short Summary of the 
 - Created At: 2023-12-06
 - Issue Creator: thecoop
 - Labels: blocker, >test-failure, :ml, Team:ML
-- Milestone: None",0,,,"There is currently 1 open blocker issue. The issue number is 103072, titled '[CI] LearningToRankRescorerIT testLearningToRankRescore failing', with 5 comments, created on 2023-12-06 by the issue creator 'thecoop'. It is labeled as 'blocker' and belongs to the 'ML' team.",0,,,There are currently no open blocker issues.,0,,,,
+- Milestone: None",0,,,"There is currently 1 open blocker issue. The issue number is 103072, titled '[CI] LearningToRankRescorerIT testLearningToRankRescore failing', with 5 comments, created on 2023-12-06 by the issue creator 'thecoop'. It is labeled as 'blocker' and belongs to the 'ML' team.",0,,,There are currently no open blocker issues.,0,,,,,"There is currently one open blocker issue with the following details:
+- Issue Number: 103072
+- Title: [CI] LearningToRankRescorerIT testLearningToRankRescore failing
+- State: open
+- Number of Comments: 5
+- Created Date: 2023-12-06
+- Issue Creator: thecoop",0,,
 ,,Can you generate a summary of all issues tagged as 'team:ql'?,"There are 2 issues tagged as team:ql. 
 Issue 101455: involved benchmarking queries failing after a new way of loading values PR in multi-index queries.The stack trace indicated a NullPointerException caused by attempting to invoke java.lang.CharSequence.length() on a null value. 
 Issue 99183: encountered an error when loading text fields from indexes with synthetic sources. The error message indicates that the system cannot access the source from scripts in synthetic mode, leading to an IllegalArgumentException.","
@@ -182,7 +197,10 @@ Two queries in the `elastic/logs` benchmarks are now failing with `Cannot invoke
 
 1. Issue number 99183 titled 'ESQL: Error when loading `text` fields from indexes with synthetic source' created by csoulios on 2023-09-04 and closed on 2023-09-27 with 6 comments.
 2. Issue number 101455 titled 'ESQL: Benchmarking query failing after new way of loading values PR in multi-index queries' created by craigtaverner on 2023-10-27 and closed on 2023-10-29 with 2 comments.",1,,,"There is 1 summary issue tagged as 'team:ql':
-1. Issue number 101455 titled 'ESQL: Benchmarking query failing after new way of loading values PR in multi-index queries' was closed on 2023-10-29 with 2 comments.",1,,,,
+1. Issue number 101455 titled 'ESQL: Benchmarking query failing after new way of loading values PR in multi-index queries' was closed on 2023-10-29 with 2 comments.",1,,,,,"There are 2 summary issues with the 'Team:QL' tag:
+
+1. Issue number 99183 titled 'ESQL: Error when loading `text` fields from indexes with synthetic source' was closed on 2023-09-27 with 6 comments. It was created on 2023-09-04 by csoulios and assigned to luigidellaquila.
+2. Issue number 101455 titled 'ESQL: Benchmarking query failing after new way of loading values PR in multi-index queries' was closed on 2023-10-29 with 2 comments. It was created on 2023-10-27 by craigtaverner and assigned to nik9000.",1,,
 ,,Generate summary of low risk issues,"The issue 96639  involves a test failure in the javaRestTestAfterRestart#6_8_20 task The failure occurred with the error message ""process was found dead while waiting for ports files.""The java.lang.IllegalStateException exception specifically indicates this problem.","Summary of low risk issues:
 1. Snapshot restore fails to allocate replicas due to FieldExistsQuery error
 2. Downsample task doesn't clear the `STARTED` status when failed/cancelled
@@ -243,7 +261,7 @@ Title: Reindex task failure log does not help understand the type of task action
 7. ReplaceDuplicateAggWithEval break BWC between 8.11 and 8.12+
 8. Gracefully stopping a deployment times out while closing the pytorch process
 9. Using `Debug.explain` kills data nodes.
-10. SecurityUsageTransportAction can leak memory by double invoking REST transport listener",0,,,"Final answer: The summary of low-risk issues includes issues related to test failures and dependencies on locale information in the ""labels"" column.",0,,,,
+10. SecurityUsageTransportAction can leak memory by double invoking REST transport listener",0,,,"Final answer: The summary of low-risk issues includes issues related to test failures and dependencies on locale information in the ""labels"" column.",0,,,,,There are 2 low risk issues in the database.,0,,
 ,,Generate a report detailing the age of open issues by month,"the age of open issues by month is:
 January 2024: 4 issues
 October 2023: 3 issues
@@ -289,4 +307,11 @@ December 2023: 1 issue","
 2023-08: 1 open issue
 2023-06: 2 open issues
 2023-04: 1 open issue
-2023-03: 1 open issue",1,,,,
+2023-03: 1 open issue",1,,,,,"The report detailing the age of open issues by month is as follows:
+- January 2024: 4 open issues
+- December 2023: 1 open issue
+- October 2023: 3 open issues
+- August 2023: 1 open issue
+- June 2023: 2 open issues
+- April 2023: 1 open issue
+- March 2023: 1 open issue",1,,

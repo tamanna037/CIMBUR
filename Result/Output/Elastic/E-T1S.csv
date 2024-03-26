@@ -1,12 +1,19 @@
-T1S-YNQ,T1S-YNA,T1S-SQ,T1S-SA,T1S-YNA_LLM,T1S-YN_LLM_R,T1S-SA_LLM,T1S-S_LLM_R,T1S-YNA_CIMBUR,T1S-YN_CIMBUR_R,T1S-SA_CIMBUR,T1S-S_CIMBUR_R,T1S-YNA_CFG,T1S-YN_CFG_R,T1S-SA_CFG,T1S-S_CFG_R,T1S-YNA_Query,T1S-YN_Query_R,T1S-SA_Query,T1S-S_Query_R,T1S-YNA_MT,T1S-YN_MT_R,T1S-SA_MT,T1S-S_MT_R,T1S-YNA_COVE,T1S-YN_COVE_R,T1S-SA_COVE,T1S-S_COVE_R
-is issue 104931 belongs to data management team?,Yes,Summarize how to solve issue 104160,by sorting the responses by creation time and only keeping the state for the most recent task if there is more than one.,"No, issue 104931 does not belong to the data management team.",0,"Title: [ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist
-State: open
-Issue Creator: droberts195
-Issue Assignees: None
-Body: The following exception trace was observed in a serverless project:
+T1S-YNQ,T1S-YNA,T1S-SQ,T1S-SA,T1S-YNA_LLM,T1S-YN_LLM_R,T1S-SA_LLM,T1S-S_LLM_R,T1S-YNA_CIMBUR,T1S-YN_CIMBUR_R,T1S-SA_CIMBUR,T1S-S_CIMBUR_R,T1S-YNA_CFG,T1S-YN_CFG_R,T1S-SA_CFG,T1S-S_CFG_R,T1S-YNA_Query,T1S-YN_Query_R,T1S-SA_Query,T1S-S_Query_R,T1S-YNA_MT,T1S-YN_MT_R,T1S-SA_MT,T1S-S_MT_R,T1S-YNA_COVE,T1S-YN_COVE_R,T1S-SA_COVE,T1S-S_COVE_R,T1S-SA_COVE_MT,T1S-S_COVE_MT_R,T1S-YNA_COVE_MT,T1S-YN_COVE_MT_R
+is issue 104931 belongs to data management team?,Yes,Summarize how to solve issue 104160,by sorting the responses by creation time and only keeping the state for the most recent task if there is more than one.,"No, issue 104931 does not belong to the data management team.",0,"To solve issue 104160, follow these steps:
 
+1. Title: [ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist
+2. State: Open
+3. Comments: 1
+4. Created At: 2024-01-09
+5. Closed At: Not closed yet
+6. Issue Creator: droberts195
+7. Labels: >bug, :ml, Team:ML
+8. Issue Assignees: None
+9. Milestone: Not assigned
+10. Body: The following exception trace was observed in a serverless project:
 ```
-java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...```",0.0,"0     No. The issue 104931 is not assigned to the da...
+java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...
+```",0,"0     No. The issue 104931 is not assigned to the da...
 1               No. Yes, issue 95917 can be reproduced.
 2     No. No, issue 103414 encounters a java.util.co...
 3     No. Issue 105206 can be replicated on a local ...
@@ -18,18 +25,16 @@ java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_dis
 9     No. No, there are no installed plugins referen...
 10    No. No, issue 97494 has not been reported to o...
 11    No. No, issue 103840 mentions the use of JDK11...
-Name: T1S-YNA_CIMBUR, dtype: object",1,"The solution for issue 104160 involves handling a java.lang.IllegalStateException due to a duplicate key in the datafeed, which can fail if multiple local datafeed tasks exist. This issue is related to the ML team and is labeled as a bug.",0.0,"No, issue 104931 does not belong to the data management team as there are no assignees for this issue.",0,"To solve issue 104160, the following steps can be taken:
-- Identify the issue creator: droberts195
-- Read the body of the issue for more details on the problem and potential solutions.",0.0,"Answer: No, issue 104931 is not assigned to the data management team.",0,"Title: [ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist
+Name: T1S-YNA_CIMBUR, dtype: object",1,"The solution approach for resolving issue 104160 involves addressing the key duplication problem related to the title ""[ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist"". The exception ""java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery"" is mentioned in the body of the issue, indicating the nature of the problem. The labels associated with this issue are "">bug"", "":ml"", and ""Team:ML"".",0,"No, issue 104931 does not belong to the data management team as there are no assignees for this issue.",0,"To solve issue 104160, the following exception trace was observed in a serverless project:
+
+```
+java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...
+```",0,"Answer: No, issue 104931 is not assigned to the data management team.",0,"Title: [ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist
 Body: The following exception trace was observed in a serverless project:
 ```
 java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...
 ```
-Labels: >bug, :ml, Team:ML",0.0,"No, issue 104931 does not fall under the responsibility of the data management team.",0,"To solve issue 104160, the following exception trace was observed in a serverless project:
-
-```
-java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...
-```",0.0,"No, issue 104931 does not belong to the data management team as there are no assignees listed for this issue. The issue 104931 belongs to the Analytics team.",0,"To solve issue 104160, follow the title '[ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist'. The issue is currently in an 'open' state with 1 comment. It was created on January 9, 2024, by 'droberts195'. The labels associated with this issue are '>bug, :ml, Team:ML'. There is no milestone set for this issue. The body of the issue describes an exception trace observed in a serverless project related to duplicate key datafeed tasks.",0.0
+Labels: >bug, :ml, Team:ML",0,"No, issue 104931 does not fall under the responsibility of the data management team.",0,"To solve issue 104160, the steps would involve investigating the exception trace observed in the serverless project related to the ML datafeed tasks. The issue is currently open and was created on January 9, 2024, by droberts195. It has 1 comment and is related to a bug in the ML team. The body of the issue contains details about the exception trace encountered.",0,"No, issue 104931 does not belong to the data management team as there are no assignees listed for this issue. The issue 104931 belongs to the Analytics team.",0,"To solve issue 104160, you need to address the problem related to the GetDatafeedRunningStateAction potentially failing.",0,"To solve issue 104160, the title of the issue is '[ML] GetDatafeedRunningStateAction can fail if multiple local datafeed tasks exist'. It is currently in an 'open' state with 1 comment. It was created on '2024-01-09' by 'droberts195'. The labels associated with this issue are '>bug, :ml, Team:ML'. The issue does not have a milestone assigned to it. The body of the issue describes an exception trace observed in a serverless project.",0,"No, issue 104931 is not specifically assigned to the Data Management team.",0
 does issue 95917 reproduce?,Yes,Summarize the reproduction steps of issue 98652,"1. Create a cluster version 8.9.1 in Elasticsearch Service (ESS): single node, 1 availability zone (AZ)
 
 2. Add a composable index template with a negative version:
@@ -38,13 +43,33 @@ Notice that the API is successfully acknowledged.
 
 3. Scale-up the cluster from 1 AZ to 2 AZ
 
-4. Observe that the second node is unable to join the cluster. Checking the Elasticsearch logs, the below warning message can be observed","No, issue 95917 does not reproduce.",0,Users may encounter an issue with Elasticsearch Version 8.9.1 (also observed in version 8.7.0) where older versions are likely affected. The problem description is not provided in the query results.,0.0,"Yes, issue 95917 can be reproduced.",1,"To reproduce the issue described in issue 98652, follow these steps:
-1. Use Elasticsearch Version 8.9.1 (also observed in version 8.7.0).
-2. Ensure no specific plugins are installed.
-3. Use the bundled Java Version.
-4. The issue involves a node being unable to join the cluster due to a negative `version` in a composable index template.",1.0,"No, issue 95917 does not reproduce.",0,"The reproduction steps of issue 98652 are as follows:
+4. Observe that the second node is unable to join the cluster. Checking the Elasticsearch logs, the below warning message can be observed","No, issue 95917 does not reproduce.",0,Users may encounter an issue with Elasticsearch Version 8.9.1 (also observed in version 8.7.0) where older versions are likely affected. The problem description is not specified further in the body of the issue.,0,"Yes, issue 95917 can be reproduced.",1,"Summarize the steps to reproduce the issue described in issue 98652: The steps needed to replicate the issue described in issue 98652 involve observing the problem in Elasticsearch Version 8.9.1 (also seen in version 8.7.0) with no response in Installed Plugins, bundled Java Version, and no specific OS Version mentioned. The problem description involves users encountering an issue.",0,"No, issue 95917 does not reproduce.",0,"The reproduction steps of issue 98652 are as follows:
+- Elasticsearch Version: 8.9.1 (problem also observed in version 8.7.0)
+- Installed Plugins: No response
+- Java Version: bundled
+- OS Version: N.A
+- Problem Description: Users may...",0,"Yes, issue 95917 can be reproduced.",1,"To reproduce the issue described in issue 98652, follow these steps:
+1. Ensure Elasticsearch Version is 8.9.1 (also observed in version 8.7.0)
+2. Check if any Installed Plugins are present (No response)
+3. Verify Java Version is bundled
+4. Ensure the OS Version is not applicable
+5. Review the Problem Description provided in the body of the issue.",0,"No, issue 95917 cannot be replicated as it is closed.",0,"### Elasticsearch Version
 
-### Elasticsearch Version
+8.9.1 
+
+Note: problem was observed also in version 8.7.0. It is likely that older versions are affected by this problem.
+
+### Problem Description
+
+Users may encounter the issue where the node is unable to join the cluster due to negative `version` in composable index template.",1,"No, issue 95917 does not reproduce.",0,"### Elasticsearch Version
+
+8.9.1
+
+Note: The problem was observed in version 8.7.0 in issues with numbers 94673 and 97350.
+
+### Problem Description
+
+Users may include cbuescher, droberts195, and craigtaverner among others.",0,"### Elasticsearch Version
 
 8.9.1 
 
@@ -64,64 +89,41 @@ N.A
 
 ### Problem Description
 
-Users may...",0.0,"Yes, issue 95917 can be reproduced.",1,"The reproduction steps provided in issue 98652 are as follows:
-
-""### Elasticsearch Version
-
-8.9.1 
-
-Note: problem was observed also in version 8.7.0. It is likely that older versions are affected by this problem.
-
-### Installed Plugins
-
-_No response_
-
-### Java Version
-
-_bundled_
-
-### OS Version
-
-N.A
-
-### Problem Description
-
-Users may...""",0.0,"No, issue 95917 cannot be replicated as it is closed.",0,"To reproduce issue 98652, follow these steps:
-1. Ensure you are using Elasticsearch Version 8.9.1 (also observed in version 8.7.0).
-2. Make sure there are no installed plugins.
-3. Use the bundled Java Version.
-4. The OS Version is not applicable.
-5. The problem description is that users may encounter an issue.",0.0,"No, issue 95917 does not reproduce.",0,,0.0
+Users may...",0,"No, issue 95917 is closed and therefore not able to be reproduced.",0
 does issue 103414 face java.lang.assertionError?,No,Summarize the steps taken to reproduce issue 103765,"To reproduce issue 103765, 1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node 2. Index data into the new node only 3.Run the query on employees  table","No, issue 103414 does not face java.lang.assertionError.",1,"To reproduce issue 103765, follow these steps:
 1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
 2. Index data into the new node only
-3. Run the query mentioned in the body of the issue against the old node",1.0,"No, issue 103414 encounters a java.util.concurrent.TimeoutException, not a java.lang.AssertionError.",1,"Reproduction steps for issue 103765 can be summarized as follows:
+3. Run the query against the old node",1,"No, issue 103414 encounters a java.util.concurrent.TimeoutException, not a java.lang.AssertionError.",1,"The reproduction steps outlined in issue 103765 are as follows: 
 1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
 2. Index data into the new node only
-3. Run the query against the old node",1.0,"No, issue 103414 does not face java.lang.assertionError.",1,"To reproduce issue 103765, follow these steps:
+3. Run the query against the old node.",1,"No, issue 103414 does not face java.lang.assertionError.",1,"Queries with duplicated aggregations don't work in a mixed cluster between 8.11 and 8.12+. This can be reproduced by following these steps:
 1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
 2. Index data into the new node only
-3. Run the query against the old node",1.0,"No, issue 103414 does not encounter a java.lang.AssertionError.",1,"Queries with duplicated aggregations don't work in a mixed cluster between 8.11 and 8.12+. This can be reproduced as follows:
-
-1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
-2. Index data into the new node only
-3. Run this query against the old node
-    ```
-    from...",1.0,"No, issue 103414 does not involve a java.lang.AssertionError.",1,"Queries with duplicated aggregations don't work in a mixed cluster between versions 8.11 and 8.12+. To reproduce the issue with number 103765, follow these steps:
+3. Run the query against the old node",1,"No, issue 103414 does not encounter a java.lang.AssertionError.",1,"Queries with duplicated aggregations don't work in a mixed cluster between versions 8.11 and 8.12+. To reproduce the issue with number 103765, follow these steps:
 1. Set up a mixed cluster with two nodes: one running version 8.11.x and the other running version 8.12+.
-2. Index data into the new node only.
-3. Run the specific query against the old node.",1.0,"No, issue 103414 does not face java.lang.assertionError.",1,"To reproduce issue 103765, follow these steps: 1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node 2. Index data into the new node only 3. Run the query against the old node.",0.0
+2. Index data into the node running the newer version only.
+3. Run the query against the node running the older version.",1,"No, issue 103414 does not involve a java.lang.AssertionError.",1,"To reproduce issue 103765, follow these steps:
+1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
+2. Index data into the new node only
+3. Run the query against the old node",1,"No, issue 103414 does not face java.lang.assertionError.",1,"To reproduce issue 103765, follow these steps: 1. Set up a mixed cluster with two nodes: one running version 8.11.x and the other running version 8.12+ 2. Index data into the new node only 3. Run the query against the old node. This issue involves queries with duplicated aggregations not working in a mixed cluster between versions 8.11 and 8.12+.",1,"To reproduce issue 103765, follow these steps:
+1. Set up a mixed cluster with two nodes: one 8.11.x node and one 8.12+ node
+2. Index data into the new node only
+3. Run the query against the old node",1,"No, issue 103414 does not involve a java.lang.AssertionError.",1
 can issue 105206 be reproduced locally?,no,Summarize the difference in server vs client log in issue 103840,"Server Log: 
 java.util.concurrent.ExecutionException
 caused by java.io.EOFException
 Client Log:  
-org.elasticsearch.ElasticsearchException",Issue 105206 can be reproduced locally.,0,"The server log in issue 103840 includes information about Elasticsearch Version 7.10.1, Java Version jdk11, and OS Version 4.14.81.bm.29-amd64. The client log is not provided in the query results.",1.0,Issue 105206 can be replicated on a local system.,0,"The variations between server and client logs in issue 103840 are related to the Elasticsearch Version, Java Version, and OS Version. The Elasticsearch Version is 7.10.1, the Java Version is jdk11, and the OS Version is 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29.",1.0,"No, issue 105206 cannot be reproduced locally.",1,"The server log in issue 103840 includes information about Elasticsearch Version 7.10.1, Java Version jdk11, and OS Version 4.14.81.bm.29-amd64. The problem description mentions cases of file-system corruption with green shards.",0.0,The issue 105206 can be reproduced locally.,0,"The variations between server and client logs in issue 103840 include details about the Elasticsearch Version (7.10.1), Java Version (jdk11), OS Version (4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29), and the problem description related to file-system corruption.",1.0,"No, the issue 105206 cannot be reproduced locally.",1,"The server log for issue 103840 mentions that the exception ""failed to load bitset"" lasted for several days. The client log does not provide any information about the duration or specific details of the exception. Both logs mention the Elasticsearch version (7.10.1), Java version (jdk11), and OS version (4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29).",0.0,"Yes, the issue 105206 can be reproduced locally.",0,"The server log in issue 103840 includes information about Elasticsearch Version 7.10.1 and the OS Version 4.14.81.bm.29-amd64. The problem description is related to file-system corruption, but there is no mention of green shards in the server log.",0.0
-"in issue 94839, does crash occurs on  a node in the cluster due to the error?",Yes,Summarize the error message for issue 17638,Duplicate key datafeed-v3_linux_system_user_discovery,"Yes, the crash occurs on a node in the cluster due to the error mentioned in issue 94839.",1,There is no issue with number 17638 in the database.,0.0,"The error in issue 94839 (""Serialization exceptions should be handled in OutboundHandler"") is related to handling serialization exceptions in the OutboundHandler and is not directly responsible for causing a crash on one of the nodes in the cluster.",1,There is no issue with number 17638 in the database.,0.0,"Yes, the crash occurs on a node in the cluster due to the error in issue 94839.",1,The error message for issue 17638 is not available as there is no data in the provided issues table for issue number 17638.,0.0,The error in issue 94839 does not cause a crash on a node in the cluster.,0,Issue 17638 does not exist in the provided data.,0.0,"No, the crash does not occur on a node in the cluster due to the error mentioned in issue 94839.",0,The error message for issue 17638 is not available as there is no data for issue number 17638 in the table.,0.0,"No, the crash is not related to issue 94839.",0,There is no issue with number 17638 in the database.,0.0
-doe issue 94839 occurs on v8.11.3?,Yes,Summarize the problem description of issue 17137,"Running a ""_terms_enum"" request on a keyword field with index: false setting can very likely throws UnsupportedOperationException.
+org.elasticsearch.ElasticsearchException",Issue 105206 can be reproduced locally.,0,"The server log in issue 103840 includes information about the Elasticsearch Version being 7.10.1, Java Version being jdk11, and OS Version being 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29. The problem description mentions cases of file-system corruption with a green shard status.",0,Issue 105206 can be replicated on a local system.,0,"The variations between server and client logs in issue 103840 are related to the Elasticsearch and Java versions, as well as the OS version. The Elasticsearch version is 7.10.1, the Java version is jdk11, and the OS version is 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29.",1,"No, issue 105206 cannot be reproduced locally.",1,"The server log in issue 103840 includes information about the Elasticsearch Version being 7.10.1, Java Version being jdk11, and OS Version being 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29. The client log is not mentioned in the result.",1,The issue 105206 can be reproduced locally.,0,"The variations between server and client logs in issue 103840 include information about the Elasticsearch Version (7.10.1), Java Version (jdk11), OS Version (4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29), and the Problem Description related to file-system corruption.",1,"No, the issue 105206 cannot be reproduced locally.",1,"The server log for issue 103840 mentions that the Elasticsearch Version is 7.10.1, Java Version is jdk11, and OS Version is 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29. The client log for issue 103840 is not available in the provided data.",1,"Yes, the issue 105206 can be reproduced locally.",0,The server log in issue 103840 includes information about the Elasticsearch Version being 7.10.1 and Java Version being jdk11. The OS Version 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29 cannot be found in the server log of issue 103840. The client log is provided in the query results for issue 103840.,1,"The server log in issue 103840 includes information about the Elasticsearch Version being 7.10.1, Java Version being jdk11, and OS Version being 4.14.81.bm.29-amd64 #1 SMP Debian 4.14.81.bm.29. The client log is not provided in the query results.",1,"No, issue 105206 cannot be reproduced locally.",1
+"in issue 94839, does crash occurs on  a node in the cluster due to the error?",Yes,Summarize the error message for issue 104160,Duplicate key datafeed-v3_linux_system_user_discovery,"Yes, the crash occurs on a node in the cluster due to the error mentioned in issue 94839.",1,"The error message for issue 104160 is: ""java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...""",0,"The error in issue 94839 (""Serialization exceptions should be handled in OutboundHandler"") is related to handling serialization exceptions in the OutboundHandler and is not directly responsible for causing a crash on one of the nodes in the cluster.",1,"The error message for issue 104160 is ""java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery"".",1,"Yes, the crash occurs on a node in the cluster due to the error in issue 94839.",1,java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...),1,The error in issue 94839 does not cause a crash on a node in the cluster.,0,"The following exception trace was observed in a serverless project:
+
+```
+java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...",1,"No, the crash does not occur on a node in the cluster due to the error mentioned in issue 94839.",0,"The error message for issue 104160 is: ""java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...""",0,"No, the crash is not related to issue 94839.",0,The error message for issue 104160 is related to the ML team and the GetDatafeedRunningStateAction.,0,"The error message for issue 104160 is: ""The following exception trace was observed in a serverless project: java.lang.IllegalStateException: Duplicate key datafeed-v3_linux_system_user_discovery (attempted merging values org.elasticsearch.xpack.core.ml.action.GetDatafeedRunningStateAction$Response$RunningState@7d2c9ddc and...""",0,"No, the crash is not related to issue 94839.",0
+doe issue 94839 occurs on v8.11.3?,Yes,Summarize the problem description of issue 94673,"Running a ""_terms_enum"" request on a keyword field with index: false setting can very likely throws UnsupportedOperationException.
 
 This happens under two conditions. The field queries by the ""_terms_enum"" has index disabled (""index"" : false),
 which means its docvalues only. This isn't the default but could happen.
-The second condition is that a shard has more than one segment. The code path that is then executed throws the following exception","No, issue 94839 does not occur on v8.11.3 as it is still open and has not been closed yet.",0,"The query returned no results for issue number 17137, so there is no problem description available for that specific issue.",0.0,"No, issue 94839 is not reported on version v8.11.3.",0,"The issue with number 17137 does not exist in the provided data, so no summary of the problem description, exceptions, and relevant details can be provided.",0.0,"No, issue 94839 does not occur on v8.11.3.",0,The problem description of issue 17137 is not available in the provided data.,0.0,"No, issue 94839 is reported on version v8.6.2.",0,The issue with number 17137 does not exist in the provided data.,0.0,"No, issue 94839 does not occur on v8.11.3 as it is not related to that version.",0,The problem description of issue 17137 is not available in the provided data.,0.0,"No, issue 94839 is not related to version v8.11.3.",0,The problem description of issue 17137 is not present in the dataset.,0.0
+The second condition is that a shard has more than one segment. The code path that is then executed throws the following exception","No, issue 94839 does not occur on v8.11.3 as it is still open and has not been closed yet.",0,"Problem Description of issue 94673: Running a ""_terms_enum"" request on a `keyword` field with `index: false` setting can very likely throw UnsupportedOperationException.",1,"No, issue 94839 is not reported on version v8.11.3.",0,"Issue 94673, titled ""Exception in `_terms_enum` on docvalue-only keywords fields,"" was created on 2023-03-23 by cbuescher and closed on 2023-03-24. The problem description for this issue is related to running a ""_terms_enum"" request on a `keyword` field with `index: false` setting, which can lead to an UnsupportedOperationException. The exception encountered in this issue is java.lang.UnsupportedOperationException. The Elasticsearch version involved is 8.6.2, with no response for installed plugins, bundled Java version, and the issue occurring on Mac OS X.",1,"No, issue 94839 does not occur on v8.11.3.",0,"The problem description of issue 94673 is: Running a ""_terms_enum"" request on a `keyword` field with `index: false` setting can very likely throw UnsupportedOperationException.",1,"No, issue 94839 is reported on version v8.6.2.",0,"Summarize the problem description, exceptions, and any relevant details of issue 94673: 
+The issue titled ""Exception in `_terms_enum` on docvalue-only keywords fields"" involves running a ""_terms_enum"" request on a `keyword` field with `index: false` setting, which can likely throw UnsupportedOperationException. The issue was created by cbuescher on 2023-03-23 and closed on 2023-03-24 with 2 comments.",1,"No, issue 94839 does not occur on v8.11.3 as it is not related to that version.",0,"Running a ""_terms_enum"" request on a `keyword` field with `index: false` setting can very likely throw UnsupportedOperationException.",1,"No, issue 94839 is not related to version v8.11.3.",0,"Running a ""_terms_enum"" request on a `keyword` field with `index: false` setting can very likely throw UnsupportedOperationException.",1,"Running a ""_terms_enum"" request on a `keyword` field with `index: false` setting can very likely throw UnsupportedOperationException.",1,"No, issue 94839 is not happening in version v8.11.3.",0
 "is issue 105822 locally reproduced?
 
 ",Yes,,,"No, issue 105822 is closed and was created by puppylpg.",0,,,"0     0     No. No. The issue 104931 is not assigned...
@@ -136,9 +138,9 @@ The second condition is that a shard has more than one segment. The code path th
 9     No. No, there are no installed plugins referen...
 10    No. No, issue 97494 has not been reported to o...
 11    No. No, issue 103840 mentions the use of JDK11...
-Name: T1S-YNA_CIMBUR, dtype: object",1,,,"Yes, issue 105822 is locally reproduced.",1,,,"Yes, issue 105822 has been locally reproduced.",1,,,"Yes, issue 105822 can be reproduced locally.",1,,,"Yes, issue 105822 has been successfully reproduced locally.",1,,
-is issue 105822 a low risk one?,yes,,,"No, issue 105822 is a closed issue.",0,,,"Yes, issue 105822 is classified as a low-risk issue.",1,,,"No, issue 105822 is not a low risk one.",0,,,"Yes, issue 105822 is categorized as a low-risk issue.",1,,,"Yes, issue 105822 is considered to be a low risk.",1,,,"Yes, issue 105822 is a low-risk one as it was assessed to have a low-risk level.",1,,
-is the issue 100082 produce on mac os?,Yes,,,"No, the issue 100082 is related to the APM agent failing to start with JDK21, not specifically related to macOS.",0,,,"Yes, issue 100082 has not been reported to occur on Mac OS.",1,,,"No, the issue 100082 is not produced on macOS.",0,,,"No, the issue 100082 is reported to occur on macOS 13.5, not specifically on Mac OS.",0,,,"No, the issue 100082 does not manifest on Mac OS. There are no reports of issue 100082 on Mac OS.",0,,,"Yes, the issue 100082 can be found in existing issue reports and macOS is listed as a compatible operating system for this issue.",1,,
-"in issue 105068 , is there any installed Plugins?",No,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,"No, there are no installed plugins referenced in issue 105068.",1,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,"No, there are no installed plugins mentioned in issue 105068.",1,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,
-is the issue 97494 produce on mac os?,No,,,"No, the issue 97494 does not mention anything about being produced on Mac OS.",1,,,"No, issue 97494 has not been reported to occur on Mac OS.",1,,,"No, the issue 97494 is not related to Mac OS.",1,,,"No, issue 97494 is not reported to occur on Mac OS.",1,,,"No, the issue 97494 is not occurring, manifesting, or observed on Mac OS.",1,,,"Yes, Mac OS is involved in issue 97494 as the issue creator is 'edsavage'.",0,,
-does issue 103840 use jdk8?,No,,,"No, issue 103840 uses jdk11, not jdk8.",1,,,"No, issue 103840 mentions the use of JDK11, not JDK8.",1,,,"No, issue 103840 uses jdk11, not jdk8.",1,,,"No, issue 103840 mentions the use of JDK11, not JDK8.",1,,,"No, issue 103840 does not use jdk8. The Java Version mentioned in the issue is ""jdk11"".",1,,,"No, issue 103840 does not exist in the database.",1,,
+Name: T1S-YNA_CIMBUR, dtype: object",1,,,"Yes, issue 105822 is locally reproduced.",1,,,"Yes, issue 105822 has been locally reproduced.",1,,,"Yes, issue 105822 can be reproduced locally.",1,,,"Yes, issue 105822 has been successfully reproduced locally.",1,,,,,"Yes, issue 105822 can be locally reproduced.",1
+is issue 105822 a low risk one?,yes,,,"No, issue 105822 is a closed issue.",0,,,"Yes, issue 105822 is classified as a low-risk issue.",1,,,"No, issue 105822 is not a low risk one.",0,,,"Yes, issue 105822 is categorized as a low-risk issue.",1,,,"Yes, issue 105822 is considered to be a low risk.",1,,,"Yes, issue 105822 is a low-risk one as it was assessed to have a low-risk level.",1,,,,,"No, issue 105822 is considered to be a low risk.",0
+is the issue 100082 produce on mac os?,Yes,,,"No, the issue 100082 is related to the APM agent failing to start with JDK21, not specifically related to macOS.",0,,,"Yes, issue 100082 has not been reported to occur on Mac OS.",1,,,"No, the issue 100082 is not produced on macOS.",0,,,"No, the issue 100082 is reported to occur on macOS 13.5, not specifically on Mac OS.",0,,,"No, the issue 100082 does not manifest on Mac OS. There are no reports of issue 100082 on Mac OS.",0,,,"Yes, the issue 100082 can be found in existing issue reports and macOS is listed as a compatible operating system for this issue.",1,,,,,"No, there are no reports of issue 100082 on Mac OS.",0
+"in issue 105068 , is there any installed Plugins?",No,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,"No, there are no installed plugins referenced in issue 105068.",1,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,"No, there are no installed plugins mentioned in issue 105068.",1,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,"No, there are no installed Plugins mentioned in issue 105068.",1,,,,,"No, issue 105068 does not have any installed Plugins.",1
+is the issue 97494 produce on mac os?,No,,,"No, the issue 97494 does not mention anything about being produced on Mac OS.",1,,,"No, issue 97494 has not been reported to occur on Mac OS.",1,,,"No, the issue 97494 is not related to Mac OS.",1,,,"No, issue 97494 is not reported to occur on Mac OS.",1,,,"No, the issue 97494 is not occurring, manifesting, or observed on Mac OS.",1,,,"Yes, Mac OS is involved in issue 97494 as the issue creator is 'edsavage'.",0,,,,,"No, the issue 97494 is not occurring on Mac OS.",1
+does issue 103840 use jdk8?,No,,,"No, issue 103840 uses jdk11, not jdk8.",1,,,"No, issue 103840 mentions the use of JDK11, not JDK8.",1,,,"No, issue 103840 uses jdk11, not jdk8.",1,,,"No, issue 103840 mentions the use of JDK11, not JDK8.",1,,,"No, issue 103840 does not use jdk8. The Java Version mentioned in the issue is ""jdk11"".",1,,,"No, issue 103840 does not exist in the database.",1,,,,,,1
